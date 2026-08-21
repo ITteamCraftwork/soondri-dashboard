@@ -776,8 +776,7 @@ Chart.register(ChartDataLabels);
 // ─────────────────────────────────────────────
 const CUSTOMERS_BY_STATUS = {
   'petZone': [
-    {no:'7',unit:'1007',name:'นางสาวเจนจิรา วิจิตรตระการรุ',nat:'ไทย',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'2 Bedrooms',colN:'',colM:'พูดคุยได้ / สนใจ Pet zone'},
-    {no:'13',unit:'1106',name:'นางสาวทัชชกร แสงจันทร์',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'1 Bedroom',colN:'สนใจ 1 ห้องนอน Pet zone ค่ะ',colM:'พูดคุยได้ / สนใจ Pet zone'},
+    {no:'7',unit:'1007',name:'นางสาวเจนจิรา วิจิตรตระการรุ',nat:'ไทย',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'2 Bedrooms',colN:'22.7.2026 นัดนำเสนอข้อมูลกับลูกค้าที่Arom ลูกค้าสนใจ2 นอนอนPet Zone ฝั่งพัทยา',colM:'พูดคุยได้ / สนใจ Pet zone'},
   ],
   'vvipYes': [
     {no:'60',unit:'1804',name:'นายเตชิต วงศ์ตระกูลจง และ นา',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'1 Bedroom',colN:'ลูกค้าขอดูรายละเอียดก่อนค่ะ ให้ส่งข้อมูลให้ค่ะ',colM:'พูดคุยได้ / สนใจ - สะดวกเข้าร่วมงาน VVIP'},
@@ -816,6 +815,7 @@ const CUSTOMERS_BY_STATUS = {
     {no:'107',unit:'2506',name:'นายLars Zurawski',nat:'ต่างชาติ',sales:'Eip',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'—',colN:'ลูกค้าสนใจ Combine ห้องเพนท์เฮ้าส์ 4904 และ 4906',colM:'สนใจ / รอชมห้องตัวอย่างจริง'},
   ],
   'priceTooHigh': [
+    {no:'13',unit:'1106',name:'นางสาวทัชชกร แสงจันทร์',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'1 Bedroom',colN:'สนใจ 1 ห้องนอน Pet zone ค่ะ พอทราบราคาแล้วแจ้งว่าราคาแรงค่ะและชั้นค่อนข้างสูงไปเ',colM:'สนใจ / แต่ราคาสูงเกินไป'},
     {no:'43',unit:'1601',name:'นายนเรศ เพชรรักษ์',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'2 Bedrooms',colN:'Call out 1 ไม่สะดวกคุยสาย Call out 2 สนใจ 2 ห้องนอนชั้นประมาณ 10-20 ให้ส่งข้อม',colM:'สนใจ / แต่ราคาสูงเกินไป'},
     {no:'47',unit:'1605',name:'นายสุพลักษณ เฉยพงษ์',nat:'ไทย',sales:'Mod',interest:0,ilabel:'—',budget:'10 ล้านบาท',utype:'1 Bedroom',colN:'สนใจ 1 ห้องนอน Private lift แต่ราคาสูง ยังไม่ตัดสินใจ',colM:'สนใจ / แต่ราคาสูงเกินไป'},
     {no:'48',unit:'1606',name:'นายสุพลักษณ เฉยพงษ์',nat:'ไทย',sales:'Mod',interest:0,ilabel:'—',budget:'10 ล้านบาท',utype:'1 Bedroom',colN:'สนใจ 1 ห้องนอน Private lift แต่ราคาสูง ยังไม่ตัดสินใจ',colM:'สนใจ / แต่ราคาสูงเกินไป'},
@@ -1018,19 +1018,19 @@ const CUSTOMERS_BY_STATUS = {
   ],
   'abroad': [
     {no:'8',unit:'1101',name:'นางสาวJian Li Helen Chen',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'15',unit:'1201',name:'นายDmitry Dambaev และ นางOlg',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'15',unit:'1201',name:'นายDmitry Dambaev และ นางOlg',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่งอีเมลให้ลูกค้าค่ะ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'17',unit:'1203',name:'นายสัมฤทธิ์ บุญเกิด',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าอยู่ต่างประเทศ สะดวกแล้วจะติดต่อกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'24',unit:'12A03',name:'นายXiao Ming',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'25',unit:'12A04',name:'นายGeorge Molina',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'31',unit:'1403',name:'นายIgor Verkhozin',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'34',unit:'1406',name:'Mr.Marcel Roland Voigt',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'40',unit:'1505',name:'นางสาวAnamaria Potoroaca',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'40',unit:'1505',name:'นางสาวAnamaria Potoroaca',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'45',unit:'1603',name:'นายJiang Xiangcong',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'44',unit:'1602',name:'นายWang Xiaobo',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'49',unit:'1607',name:'นางสาวZhen Zhang',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งอีเมลล์ยังไม่มีการตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'66',unit:'1903',name:'นายKatsuaki Aoyagi',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'66',unit:'1903',name:'นายKatsuaki Aoyagi',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ติดต่อไม่ได้ ไม่มีอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'75',unit:'2005',name:'นางสาวHuizhi Zhang',nat:'ต่างชาติ',sales:'Pluck',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'ส่งเมล์ไปแล้วรอตอบกลับ และพยายามแอด whatsapp แต่ลูกค้าน่าจะไม่ได้ใช้เนื่องจากแอด',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'86',unit:'2202',name:'นายโทมัส อเล็กซานเดอร์ เลทัน',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'86',unit:'2202',name:'นายโทมัส อเล็กซานเดอร์ เลทัน',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลให้ลูกค้าแล้วค่ะ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'94',unit:'2305',name:'Mr.Eliyahu Ben Yehuda',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'96',unit:'2307',name:'Mr.HUI BO',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'103',unit:'2501',name:'Mrs.Caofang Wei',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
@@ -1039,14 +1039,14 @@ const CUSTOMERS_BY_STATUS = {
     {no:'112',unit:'2605',name:'นายAleksandr Banov',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'115',unit:'2701',name:'นายFrederick Ford Hill',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'116',unit:'2702',name:'Mr.Erdem Semenov',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'117',unit:'2703',name:'นายGolovin Dmitry',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'117',unit:'2703',name:'นายGolovin Dmitry',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'124',unit:'2806',name:'นางสาวChuen Wa Shirley Hea',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'125',unit:'2807',name:'นางสาวChuen Wa Shirley Hea',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'129',unit:'2905',name:'นายIslam Helmi Shedeed Manso',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'131',unit:'2907',name:'นายCaiyong Wang และ นางWeiyi',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'133',unit:'3002',name:'Mr.Eyal Zaltsman',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'136',unit:'3006',name:'Mr.Eyal Schachter',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'137',unit:'3007',name:'นายTorsten Witte',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'137',unit:'3007',name:'นายTorsten Witte',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'142',unit:'305',name:'นายMiao Sun',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'143',unit:'306',name:'นายAsi Yosef Abir Sharabi',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'145',unit:'3101',name:'นางสาวศิริโฉม ชูหนู',nat:'ไทย',sales:'Ice / กรรมการตึก',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์โทรตางประเทศ ส่งข้อมูลทางไลน์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
@@ -1064,14 +1064,14 @@ const CUSTOMERS_BY_STATUS = {
     {no:'220',unit:'4303',name:'นายKimihito Komata',nat:'ต่างชาติ',sales:'Jeab',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'230',unit:'4501',name:'นายMorgan Henry Dennis',nat:'ต่างชาติ',sales:'Pluck',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'ส่ง Whatsapp หาลูกค้าแต่ลูกค้ายังไม่ตอบ ได้ลองโทรไปทาง Whatsapp แต่ไม่มีปลายสายร',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'233',unit:'4505',name:'นางสาวซายูริ โฮกามะ',nat:'ต่างชาติ',sales:'Jeab',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'251',unit:'4805',name:'นางสาวNatalija Segale',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'251',unit:'4805',name:'นางสาวNatalija Segale',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'252',unit:'4806',name:'นายRafael Ernst Edmund Perlu',nat:'ต่างชาติ',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'255',unit:'4902',name:'นายKiyomi Ogawa',nat:'ต่างชาติ',sales:'Jeab',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'281',unit:'606',name:'นางสาวเพ็ญพร บูรณะ',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'283',unit:'701',name:'นางสาวOlga Alekseevna Juon',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'297',unit:'901',name:'Mr.Roy Hubertus Maria Vankan',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'301',unit:'905',name:'Mr.Ronald Mitchell Coleman แ',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'303',unit:'907',name:'Sabiedriba ar ierobezotu a',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'303',unit:'907',name:'Sabiedriba ar ierobezotu a',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
   ],
   'offline': [
     {no:'65',unit:'1902',name:'นางสาวบุณฑริกา แซ่โพร่ง',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าปิดเครื่อง ติดต่อใหม่ภายหลัง',colM:'ติดต่อไม่ได้ / ปิดเครื่อง'},
@@ -1123,7 +1123,7 @@ const CUSTOMERS_BY_STATUS = {
 const D = {
   totalCustomers:307, totalCalls:270, reachable:186,
   // ตัวเลขจริงจากคอลัมน์ F + Column M
-  warmLeads:12, hotLeads:0, neutralLeads:0, coolLeads:106, coldLeads:72,
+  warmLeads:11, hotLeads:0, neutralLeads:0, coolLeads:106, coldLeads:72,
   brochure:42, siteVisit:0, closed:0,
   thai:200, foreign:107,
   uncalled:37, noAnswer:17, wrongNum:4, abroad:55, offline:7,
@@ -1161,7 +1161,7 @@ const D = {
 
   salesData:[
     {name:'Eip',calls:44,reached:35,warm:2,hot:0,cold:3,neutral:0,cool:4,timeAvg:'—'},
-    {name:'Pupey',calls:69,reached:52,warm:9,hot:0,cold:17,neutral:0,cool:9,timeAvg:'—'},
+    {name:'Pupey',calls:69,reached:52,warm:8,hot:0,cold:17,neutral:0,cool:9,timeAvg:'—'},
     {name:'Ice',calls:60,reached:36,warm:0,hot:0,cold:15,neutral:0,cool:16,timeAvg:'—'},
     {name:'Maila',calls:65,reached:37,warm:1,hot:0,cold:13,neutral:0,cool:13,timeAvg:'—'},
     {name:'Mod',calls:3,reached:3,warm:0,hot:0,cold:0,neutral:0,cool:0,timeAvg:'—'},
@@ -1190,7 +1190,6 @@ const D = {
     {name:'นางสาวพรรณพชร จีรบุณย์',unit:'1103',nat:'ไทย',interest:2,rel:0,seg:'PARK'},
     {name:'นางพรพรหม วรสินธุ์',unit:'1104',nat:'ไทย',interest:1,rel:0,seg:'PARK'},
     {name:'นายสิทธิโรจน์ ศศิสัจจา',unit:'1105',nat:'ไทย',interest:1,rel:0,seg:'PARK'},
-    {name:'นางสาวทัชชกร แสงจันทร์',unit:'1106',nat:'ไทย',interest:4,rel:0,seg:'PUSH'},
     {name:'นางนภาภรณ์ ฮาเซกาวา',unit:'1107',nat:'ไทย',interest:2,rel:0,seg:'PARK'},
     {name:'นายDmitry Dambaev และ นางOlg',unit:'1201',nat:'ต่างชาติ',interest:2,rel:0,seg:'PARK'},
     {name:'นายสัมฤทธิ์ บุญเกิด',unit:'1203',nat:'ไทย',interest:2,rel:0,seg:'PARK'},
@@ -1702,17 +1701,17 @@ function renderA1(){
 
   // ── ZONE 2B: STATUS CARDS — Group A-G ──
   const FEEDBACK_GROUPS = [
-    { id:'A', label:'พูดคุยได้และสนใจ (Hot/Warm)', col:'#16a34a', total:28,
+    { id:'A', label:'พูดคุยได้และสนใจ (Hot/Warm)', col:'#16a34a', total:27,
       rows:[
-        {key:'petZone',       cnt:2,  label:'พูดคุยได้ / สนใจ Pet zone'},
+        {key:'petZone',       cnt:1,  label:'พูดคุยได้ / สนใจ Pet zone'},
         {key:'vvipYes',       cnt:10,  label:'พูดคุยได้ / สนใจ - สะดวกเข้าร่วมงาน VVIP'},
         {key:'vvipNo',        cnt:9,  label:'พูดคุยได้ / สนใจ - ไม่สะดวกเข้าร่วมงาน VVIP'},
         {key:'concernReached',cnt:7,  label:'พูดคุยได้ / แต่มี Concern Arom Wongamat'},
       ]},
-    { id:'B', label:'สนใจแต่มีเงื่อนไข', col:'#059669', total:9,
+    { id:'B', label:'สนใจแต่มีเงื่อนไข', col:'#059669', total:10,
       rows:[
         {key:'waitSample',    cnt:2,  label:'สนใจ - รอชมห้องตัวอย่างจริง'},
-        {key:'priceTooHigh',  cnt:7,  label:'สนใจ - แต่ราคาสูงไป'},
+        {key:'priceTooHigh',  cnt:8,  label:'สนใจ - แต่ราคาสูงไป'},
       ]},
     { id:'C', label:'พูดคุยได้ รอ Follow-up', col:'#2557a7', total:85,
       rows:[
@@ -2877,7 +2876,8 @@ const PIPELINE_DATA = {
     {no:'8',unit:'1101',name:'นางสาวJian Li Helen Chen',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'9'},
     {no:'9',unit:'1102',name:'นายจักริน นันทโพธิเดช',nat:'ไทย',sales:'Maila',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าติดประชุม ขอสอบถามราคาและโลเคชั่นเบื้องต้น หากประชุมเสร็จจะติดต่อกลับเซลส์',colM:'พูดคุยได้ / ให้ติดต่อกลับภายหลัง',remark:'10'},
     {no:'10',unit:'1103',name:'นางสาวพรรณพชร จีรบุณย์',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ยังไม่สนใจซื้อ ช่วงนี้ยังไม่สนใจซื้ออสังหาเก็บไว้ด้วย ส่วนวันงานVVIP ลูกติดไปแข่',colM:'พูดคุยได้ / ไม่สนใจซื้อ',remark:'11'},
-    {no:'15',unit:'1201',name:'นายDmitry Dambaev และ นางOlg',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'16'},
+    {no:'13',unit:'1106',name:'นางสาวทัชชกร แสงจันทร์',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'1 Bedroom',colN:'สนใจ 1 ห้องนอน Pet zone ค่ะ พอทราบราคาแล้วแจ้งว่าราคาแรงค่ะและชั้นค่อนข้างสูงไปเ',colM:'สนใจ / แต่ราคาสูงเกินไป',remark:'14'},
+    {no:'15',unit:'1201',name:'นายDmitry Dambaev และ นางOlg',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่งอีเมลให้ลูกค้าค่ะ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'16'},
     {no:'16',unit:'1202',name:'นางสาวปวีณา ศรีน้อย',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'1 Bedroom',colN:'Call out 1 ลูกค้าให้โทรกลับช่วงเย็น ขับรถอยู่ค่ะ Call out 2 ไม่รับสาย Call out',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'17'},
     {no:'17',unit:'1203',name:'นายสัมฤทธิ์ บุญเกิด',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าอยู่ต่างประเทศ สะดวกแล้วจะติดต่อกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'18'},
     {no:'18',unit:'1204',name:'นางสาวรวิภา อู่อรุณ',nat:'ไทย',sales:'Maila',interest:1,ilabel:'❄️ Cold',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ยังไม่สนใจซื้ออสังหาใดๆในช่วงนี้',colM:'พูดคุยได้ / ไม่สนใจซื้อ',remark:'19'},
@@ -2890,7 +2890,7 @@ const PIPELINE_DATA = {
     {no:'29',unit:'1401',name:'นางจิราพัชร์ พัฒนณรงค์กรณ์',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ไม่สนใจซื้อ ชีวิตประจำวันส่วนใหญ่และลูกๆอยู่ที่กรุงเทพ มีอารมณ์วงศ์อมาตย์เป็นบ้า',colM:'พูดคุยได้ / ไม่สนใจซื้อ',remark:'30'},
     {no:'31',unit:'1403',name:'นายIgor Verkhozin',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'32'},
     {no:'34',unit:'1406',name:'Mr.Marcel Roland Voigt',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'35'},
-    {no:'40',unit:'1505',name:'นางสาวAnamaria Potoroaca',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'41'},
+    {no:'40',unit:'1505',name:'นางสาวAnamaria Potoroaca',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'41'},
     {no:'45',unit:'1603',name:'นายJiang Xiangcong',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'44'},
     {no:'44',unit:'1602',name:'นายWang Xiaobo',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'46'},
     {no:'49',unit:'1607',name:'นางสาวZhen Zhang',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งอีเมลล์ยังไม่มีการตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'50'},
@@ -2898,14 +2898,14 @@ const PIPELINE_DATA = {
     {no:'62',unit:'1806',name:'นางสาวธารทิพย์ สุทธิสมิทธิ์',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'1 Bedroom',colN:'Call out 1 ไม่สะดวกคุยสาย Call out 2 ให้ส่งข้อมูลให้ทางไลน์คุณผู้ชาย ไอดี chai',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'63'},
     {no:'64',unit:'1901',name:'นายภาสวิชญ์ นะลำเลียง และ นา',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าสอบถามข้อมูลเบื้องต้น ให้ส่งข้อมูลทางไลน์ sscc_supat แจ้งกำหนดการรอบจอง',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'65'},
     {no:'65',unit:'1902',name:'นางสาวบุณฑริกา แซ่โพร่ง',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าปิดเครื่อง ติดต่อใหม่ภายหลัง',colM:'ติดต่อไม่ได้ / ปิดเครื่อง',remark:'66'},
-    {no:'66',unit:'1903',name:'นายKatsuaki Aoyagi',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'67'},
+    {no:'66',unit:'1903',name:'นายKatsuaki Aoyagi',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ติดต่อไม่ได้ ไม่มีอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'67'},
     {no:'67',unit:'1904',name:'นายปิยวิทย์ มั่นพันธ์พาณิชย์',nat:'ไทย',sales:'Ice',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าสอบถามข้อมูลเบื้องต้น ให้ส่งข้อมูลทางไลน์ สอบถามถึงตรงที่ทุบตรงวงศ์อมาตย์เ',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'68'},
     {no:'70',unit:'1907',name:'นายนิรันดร์ ทับทิมคุณา',nat:'ไทย',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'Call out 1 ลูกค้าไม่รับสาย Call out 2 ลูกค้าไม่รับสาย',colM:'ไม่รับสาย (2 ครั้ง)',remark:'71'},
     {no:'71',unit:'2001',name:'นายอรุษ แสงจันทร์',nat:'ไทย',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าสอบถามราคา แต่ไม่สะดวกให้ส่งข้อมูลค่ะ',colM:'พูดคุยได้ / ให้ติดต่อกลับภายหลัง',remark:'72'},
     {no:'72',unit:'2002',name:'นายDias Sarsembayev',nat:'ต่างชาติ',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'ติดต่อลูกค้าทาง Whatsapp ยังไม่ตอบกลับ แต่มีทราบข้อมลโครงการช่วงกลางเดือนพฤษภา ข',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'73'},
     {no:'80',unit:'2103',name:'นายบรรพต เกียรติธนะบำรุง',nat:'ไทย',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'81'},
     {no:'81',unit:'2104',name:'นายบรรพต เกียรติธนะบำรุง',nat:'ไทย',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'82'},
-    {no:'86',unit:'2202',name:'นายโทมัส อเล็กซานเดอร์ เลทัน',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'87'},
+    {no:'86',unit:'2202',name:'นายโทมัส อเล็กซานเดอร์ เลทัน',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลให้ลูกค้าแล้วค่ะ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'87'},
     {no:'88',unit:'2205',name:'นายฉี แซ่โพร่ง',nat:'ไทย',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'ลูกค้าแจ้งว่าไม่มีแพลนจะซื้อ แจ้งว่ามีงานเปิดตัวช่วงปลายเดือนลูกค้าแจ้งว่าไม่สะด',colM:'พูดคุยได้ / ไม่สนใจซื้อ',remark:'89'},
     {no:'89',unit:'2206',name:'นางสาวธนัช เลียวตระกูล',nat:'ไทย',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าแจ้งว่าขอดูข้อมูลก่อน',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'90'},
     {no:'93',unit:'2303',name:'นางWang Fei',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ไม่ถูกต้อง ส่งข้อมูลทางอีเมล',colM:'เบอร์ไม่ถูกต้อง / ไม่เปิดใช้บริการ',remark:'94'},
@@ -2915,7 +2915,7 @@ const PIPELINE_DATA = {
     {no:'108',unit:'2507',name:'นายณัฐพล หาญกมลศิริ',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าให้ติดต่อคุณพ่อ(คุณสุวัฒน์ 081-4207975) ติดต่อแล้วทางคุณสุวัฒน์ให้แอดไลน์ส',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'109'},
     {no:'113',unit:'2606',name:'นางอุมาพร วชิราพิภพ',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'สอบถามราคา 2 ห้องนอนและบีชฟร้อนท์วิลล่าให้ส่งข้อมูลเพิ่มทางไลน์ค่ะ',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'114'},
     {no:'116',unit:'2702',name:'Mr.Erdem Semenov',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'117'},
-    {no:'117',unit:'2703',name:'นายGolovin Dmitry',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'118'},
+    {no:'117',unit:'2703',name:'นายGolovin Dmitry',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'118'},
     {no:'120',unit:'2801',name:'Mr.Tan Cheng Kiat และ นางสาว',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าแจ้งว่าสามีอยู่ที่อินโดนีเซีย ยังไม่สะดวกไปร่วมงาน ขอให้ส่งข้อมูลไปทางไลน์',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'121'},
     {no:'123',unit:'2805',name:'นายชยธร กิติยาดิศัย และ นายก',nat:'ไทย',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'Call out 1 ลูกค้าไม่รับสายค่ะ Call out 2โทรติดแต่ลูกค้าตัดสายทิ้งค่ะ',colM:'ไม่รับสาย (2 ครั้ง)',remark:'124'},
     {no:'124',unit:'2806',name:'นางสาวChuen Wa Shirley Hea',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'125'},
@@ -2925,7 +2925,7 @@ const PIPELINE_DATA = {
     {no:'131',unit:'2907',name:'นายCaiyong Wang และ นางWeiyi',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'132'},
     {no:'133',unit:'3002',name:'Mr.Eyal Zaltsman',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'134'},
     {no:'136',unit:'3006',name:'Mr.Eyal Schachter',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'137'},
-    {no:'137',unit:'3007',name:'นายTorsten Witte',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'138'},
+    {no:'137',unit:'3007',name:'นายTorsten Witte',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'138'},
     {no:'141',unit:'304',name:'นายจินตชา บุนนาค',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ลูกค้าให้แอดไลน์ส่งข้อมูลให้ทางไอดีไลน์ jintacha',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'142'},
     {no:'142',unit:'305',name:'นายMiao Sun',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'143'},
     {no:'143',unit:'306',name:'นายAsi Yosef Abir Sharabi',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'144'},
@@ -2969,7 +2969,7 @@ const PIPELINE_DATA = {
     {no:'239',unit:'4605',name:'Mr.Leppaeniemi Hannu Pertti',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'ขอให้ส่งข้อมูลทางไล์เพิ่มเติม',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'240'},
     {no:'243',unit:'4702',name:'Mr.Matthias Schumacher',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'ติดต่อกลับภายหลัง',colM:'พูดคุยได้ / ให้ติดต่อกลับภายหลัง',remark:'244'},
     {no:'248',unit:'4801',name:'นางสาววราภรณ์ รุ่งรัตนาภรณ์',nat:'ไทย',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'ไม่่สะดวกรับฟังข้อมูล หากว่างจะติดต่อมาเอง',colM:'พูดคุยได้ / ให้ติดต่อกลับภายหลัง',remark:'249'},
-    {no:'251',unit:'4805',name:'นางสาวNatalija Segale',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'252'},
+    {no:'251',unit:'4805',name:'นางสาวNatalija Segale',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'252'},
     {no:'254',unit:'4901',name:'นายสุทธิกิตติ์ พูนธนาทรัพย์',nat:'ไทย',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'ติดต่อกลับภายหลัง',colM:'พูดคุยได้ / ให้ติดต่อกลับภายหลัง',remark:'255'},
     {no:'259',unit:'5001',name:'นายภัทราวุธ ธรรมวิเศษ',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'คุณเตย (เลขา) รับสายให้ส่งข้อมูลทางไลน์และจะแจ้งเจ้านายให้ค่ะ',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'260'},
     {no:'260',unit:'5002',name:'นายภัทราวุธ ธรรมวิเศษ',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'คุณเตย (เลขา) รับสายให้ส่งข้อมูลทางไลน์และจะแจ้งเจ้านายให้ค่ะ',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'261'},
@@ -2986,11 +2986,10 @@ const PIPELINE_DATA = {
     {no:'297',unit:'901',name:'Mr.Roy Hubertus Maria Vankan',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'298'},
     {no:'298',unit:'902',name:'นายนนทพันธ์ ณรงค์',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'Call out 1 ลูกค้าไม่่สะดวกคุยให้ติดต่อกลับภายหลังค่ะ Call out 2 ลูกค้าให้แอดไล',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'299'},
     {no:'301',unit:'905',name:'Mr.Ronald Mitchell Coleman แ',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'302'},
-    {no:'303',unit:'907',name:'Sabiedriba ar ierobezotu a',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'304'},
+    {no:'303',unit:'907',name:'Sabiedriba ar ierobezotu a',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'304'},
   ],
   'Interested': [
     {no:'3',unit:'1003',name:'นางโสภิตา สันติตระกูล',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่่งข้อมูลเพิ่มทางไลน์ อยากรอชมห้องตัวอย่างค่ะ',colM:'สนใจ / รอชมห้องตัวอย่างจริง',remark:'4'},
-    {no:'13',unit:'1106',name:'นางสาวทัชชกร แสงจันทร์',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'1 Bedroom',colN:'สนใจ 1 ห้องนอน Pet zone ค่ะ',colM:'พูดคุยได้ / สนใจ Pet zone',remark:'14'},
     {no:'39',unit:'1504',name:'นางรัชนี ศุภประเสริฐ',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'2 Bedrooms',colN:'ลูกค้าสนใจดูลงทุน 2 ห้องนอน เพราะปล่อยเช่าง่าย ให้ส่งข้อมูลเพิ่มทางไลน์ค่ะ',colM:'พูดคุยได้ / สนใจ - ไม่สะดวกเข้าร่วมงาน VVIP',remark:'40'},
     {no:'43',unit:'1601',name:'นายนเรศ เพชรรักษ์',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'2 Bedrooms',colN:'Call out 1 ไม่สะดวกคุยสาย Call out 2 สนใจ 2 ห้องนอนชั้นประมาณ 10-20 ให้ส่งข้อม',colM:'สนใจ / แต่ราคาสูงเกินไป',remark:'45'},
     {no:'60',unit:'1804',name:'นายเตชิต วงศ์ตระกูลจง และ นา',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'1 Bedroom',colN:'ลูกค้าขอดูรายละเอียดก่อนค่ะ ให้ส่งข้อมูลให้ค่ะ',colM:'พูดคุยได้ / สนใจ - สะดวกเข้าร่วมงาน VVIP',remark:'61'},
@@ -3011,7 +3010,7 @@ const PIPELINE_DATA = {
     {no:'299',unit:'903',name:'นางสุมาลี สุพัฒน์',nat:'ไทย',sales:'Ice',interest:0,ilabel:'—',budget:'—',utype:'1 Bedroom',colN:'Call 1 ลูกค้าไม่รับสาย จะติดตามอีกครั้ง Call 2 โทรติดตามอีกครั้ง เป็นคุณผู้ชาย',colM:'ไม่รับสาย (1 ครั้ง)',remark:'300'},
   ],
   'Presentation Done': [
-    {no:'7',unit:'1007',name:'นางสาวเจนจิรา วิจิตรตระการรุ',nat:'ไทย',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'2 Bedrooms',colN:'',colM:'พูดคุยได้ / สนใจ Pet zone',remark:'8'},
+    {no:'7',unit:'1007',name:'นางสาวเจนจิรา วิจิตรตระการรุ',nat:'ไทย',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'2 Bedrooms',colN:'22.7.2026 นัดนำเสนอข้อมูลกับลูกค้าที่Arom ลูกค้าสนใจ2 นอนอนPet Zone ฝั่งพัทยา',colM:'พูดคุยได้ / สนใจ Pet zone',remark:'8'},
     {no:'14',unit:'1107',name:'นางนภาภรณ์ ฮาเซกาวา',nat:'ไทย',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'2 Bedrooms',colN:'ลูกค้าสนใจขอข้อมูล ต้องการให้ส่งให้ดูทางไลน์ก่อน',colM:'พูดคุยได้ / ขอข้อมูลทางไลน์ก่อน',remark:'15'},
     {no:'107',unit:'2506',name:'นายLars Zurawski',nat:'ต่างชาติ',sales:'Eip',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'—',colN:'ลูกค้าสนใจ Combine ห้องเพนท์เฮ้าส์ 4904 และ 4906',colM:'สนใจ / รอชมห้องตัวอย่างจริง',remark:'108'},
     {no:'163',unit:'3401',name:'นายLars Zurawski',nat:'ต่างชาติ',sales:'Eip',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'—',colN:'ลูกค้าสนใจ Combine ห้องเพนท์เฮ้าส์ 4904 และ 4906',colM:'พูดคุยได้ / สนใจ - ไม่สะดวกเข้าร่วมงาน VVIP',remark:'164'},
@@ -3220,7 +3219,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   buildTabNav('analyze');
   renderA1();
 });
-
 
 
 </script>

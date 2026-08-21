@@ -776,6 +776,7 @@ Chart.register(ChartDataLabels);
 // ─────────────────────────────────────────────
 const CUSTOMERS_BY_STATUS = {
   'petZone': [
+    {no:'3',unit:'1003',name:'นางโสภิตา สันติตระกูล',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่่งข้อมูลเพิ่มทางไลน์ อยากรอชมห้องตัวอย่างค่ะ',colM:'พูดคุยได้ / สนใจ Pet zone'},
     {no:'7',unit:'1007',name:'นางสาวเจนจิรา วิจิตรตระการรุ',nat:'ไทย',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'2 Bedrooms',colN:'22.7.2026 นัดนำเสนอข้อมูลกับลูกค้าที่Arom ลูกค้าสนใจ2 นอนอนPet Zone ฝั่งพัทยา',colM:'พูดคุยได้ / สนใจ Pet zone'},
   ],
   'vvipYes': [
@@ -811,7 +812,6 @@ const CUSTOMERS_BY_STATUS = {
     {no:'272',unit:'5101',name:'นายCraig Alvin Corliss และ น',nat:'ต่างชาติ',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'Penthouse / Dup',colN:'16.8.2026 ลูกค้าติดต่อผ่านทาง Pattaya Pro นัดหมายนำเสนอ ลูกค้าให้ความสนใจห้อง',colM:'พูดคุยได้ / แต่มี Concern Arom Wongamat'},
   ],
   'waitSample': [
-    {no:'3',unit:'1003',name:'นางโสภิตา สันติตระกูล',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่่งข้อมูลเพิ่มทางไลน์ อยากรอชมห้องตัวอย่างค่ะ',colM:'สนใจ / รอชมห้องตัวอย่างจริง'},
     {no:'107',unit:'2506',name:'นายLars Zurawski',nat:'ต่างชาติ',sales:'Eip',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'—',colN:'ลูกค้าสนใจ Combine ห้องเพนท์เฮ้าส์ 4904 และ 4906',colM:'สนใจ / รอชมห้องตัวอย่างจริง'},
   ],
   'priceTooHigh': [
@@ -1035,7 +1035,7 @@ const CUSTOMERS_BY_STATUS = {
     {no:'96',unit:'2307',name:'Mr.HUI BO',nat:'ต่างชาติ',sales:'Eip',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'103',unit:'2501',name:'Mrs.Caofang Wei',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'105',unit:'2503',name:'นายRihao Shangguan และ นางQi',nat:'ต่างชาติ',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
-    {no:'110',unit:'2602',name:'นายRafael Ernst Edmund Perlu',nat:'ต่างชาติ',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
+    {no:'110',unit:'2602',name:'นายRafael Ernst Edmund Perlu',nat:'ต่างชาติ',sales:'Eip',interest:0,ilabel:'—',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'112',unit:'2605',name:'นายAleksandr Banov',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'115',unit:'2701',name:'นายFrederick Ford Hill',nat:'ต่างชาติ',sales:'Maila',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศส่งอีเมลล์ให้กับลูกค้ายังไม่ตอบกลับ',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
     {no:'116',unit:'2702',name:'Mr.Erdem Semenov',nat:'ต่างชาติ',sales:'Ice',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'เบอร์ต่างประเทศ ส่งข้อมูลทางเมลล์',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ'},
@@ -1701,16 +1701,16 @@ function renderA1(){
 
   // ── ZONE 2B: STATUS CARDS — Group A-G ──
   const FEEDBACK_GROUPS = [
-    { id:'A', label:'พูดคุยได้และสนใจ (Hot/Warm)', col:'#16a34a', total:27,
+    { id:'A', label:'พูดคุยได้และสนใจ (Hot/Warm)', col:'#16a34a', total:28,
       rows:[
-        {key:'petZone',       cnt:1,  label:'พูดคุยได้ / สนใจ Pet zone'},
+        {key:'petZone',       cnt:2,  label:'พูดคุยได้ / สนใจ Pet zone'},
         {key:'vvipYes',       cnt:10,  label:'พูดคุยได้ / สนใจ - สะดวกเข้าร่วมงาน VVIP'},
         {key:'vvipNo',        cnt:9,  label:'พูดคุยได้ / สนใจ - ไม่สะดวกเข้าร่วมงาน VVIP'},
         {key:'concernReached',cnt:7,  label:'พูดคุยได้ / แต่มี Concern Arom Wongamat'},
       ]},
-    { id:'B', label:'สนใจแต่มีเงื่อนไข', col:'#059669', total:10,
+    { id:'B', label:'สนใจแต่มีเงื่อนไข', col:'#059669', total:9,
       rows:[
-        {key:'waitSample',    cnt:2,  label:'สนใจ - รอชมห้องตัวอย่างจริง'},
+        {key:'waitSample',    cnt:1,  label:'สนใจ - รอชมห้องตัวอย่างจริง'},
         {key:'priceTooHigh',  cnt:8,  label:'สนใจ - แต่ราคาสูงไป'},
       ]},
     { id:'C', label:'พูดคุยได้ รอ Follow-up', col:'#2557a7', total:85,
@@ -2989,7 +2989,7 @@ const PIPELINE_DATA = {
     {no:'303',unit:'907',name:'Sabiedriba ar ierobezotu a',nat:'ต่างชาติ',sales:'Pupey',interest:2,ilabel:'🔵 Cool',budget:'—',utype:'—',colN:'เบอร์ต่างประเทศ่งข้อมูลทางอีเมล',colM:'เบอร์ต่างประเทศ/ส่งข้อมูลทางอิเมล์ ยังไม่มีการตอบกลับ',remark:'304'},
   ],
   'Interested': [
-    {no:'3',unit:'1003',name:'นางโสภิตา สันติตระกูล',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่่งข้อมูลเพิ่มทางไลน์ อยากรอชมห้องตัวอย่างค่ะ',colM:'สนใจ / รอชมห้องตัวอย่างจริง',remark:'4'},
+    {no:'3',unit:'1003',name:'นางโสภิตา สันติตระกูล',nat:'ไทย',sales:'Pupey',interest:0,ilabel:'—',budget:'—',utype:'ยังไม่ตัดสินใจ',colN:'ส่่งข้อมูลเพิ่มทางไลน์ อยากรอชมห้องตัวอย่างค่ะ',colM:'พูดคุยได้ / สนใจ Pet zone',remark:'4'},
     {no:'39',unit:'1504',name:'นางรัชนี ศุภประเสริฐ',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'2 Bedrooms',colN:'ลูกค้าสนใจดูลงทุน 2 ห้องนอน เพราะปล่อยเช่าง่าย ให้ส่งข้อมูลเพิ่มทางไลน์ค่ะ',colM:'พูดคุยได้ / สนใจ - ไม่สะดวกเข้าร่วมงาน VVIP',remark:'40'},
     {no:'43',unit:'1601',name:'นายนเรศ เพชรรักษ์',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'2 Bedrooms',colN:'Call out 1 ไม่สะดวกคุยสาย Call out 2 สนใจ 2 ห้องนอนชั้นประมาณ 10-20 ให้ส่งข้อม',colM:'สนใจ / แต่ราคาสูงเกินไป',remark:'45'},
     {no:'60',unit:'1804',name:'นายเตชิต วงศ์ตระกูลจง และ นา',nat:'ไทย',sales:'Pupey',interest:4,ilabel:'🟡 Warm',budget:'—',utype:'1 Bedroom',colN:'ลูกค้าขอดูรายละเอียดก่อนค่ะ ให้ส่งข้อมูลให้ค่ะ',colM:'พูดคุยได้ / สนใจ - สะดวกเข้าร่วมงาน VVIP',remark:'61'},
@@ -3219,7 +3219,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   buildTabNav('analyze');
   renderA1();
 });
-
 
 </script>
 </body>

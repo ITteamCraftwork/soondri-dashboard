@@ -2409,10 +2409,10 @@ function renderI2(){
   const CS = D.callStatus;
   const total=D.objections.reduce((s,o)=>s+o.count,0);
   document.getElementById('i2-kpi').innerHTML=
-    '<div class="kpi"><div class="kpi-lbl">หมวด OBJECTION</div><div class="kpi-val">7</div><div class="kpi-sub">หมวดหมู่บริบทไทย</div></div>'
-   +'<div class="kpi y"><div class="kpi-lbl">อยู่ต่างประเทศ</div><div class="kpi-val">65</div><div class="kpi-sub">เบอร์ต่างประเทศ — ต้องใช้ Email/WA</div></div>'
-   +'<div class="kpi b"><div class="kpi-lbl">ราคาสูงเกินงบ</div><div class="kpi-val">14</div><div class="kpi-sub">ราย — เสนอ Flex Payment</div></div>'
-   +'<div class="kpi r"><div class="kpi-lbl">Brand Risk</div><div class="kpi-val">'+D.concern+'<div class="kpi-sub">⚠️ ต้องจัดการด่วน</div></div>';
+    '<div class="kpi"><div class="kpi-lbl">หมวด OBJECTION</div><div class="kpi-val">'+D.objections.length+'</div><div class="kpi-sub">หมวดหมู่บริบทไทย</div></div>'
+   +'<div class="kpi y"><div class="kpi-lbl">อยู่ต่างประเทศ</div><div class="kpi-val">'+D.abroad+'</div><div class="kpi-sub">เบอร์ต่างประเทศ — ต้องใช้ Email/WA</div></div>'
+   +'<div class="kpi b"><div class="kpi-lbl">ราคาสูงเกินงบ</div><div class="kpi-val">'+D.callStatus.priceTooHigh.cnt+'</div><div class="kpi-sub">ราย — เสนอ Flex Payment</div></div>'
+   +'<div class="kpi r"><div class="kpi-lbl">Brand Risk</div><div class="kpi-val">'+D.concern+'</div><div class="kpi-sub">⚠️ ต้องจัดการด่วน</div></div>';
 
   mkChart('objChart','bar',D.objections.map(o=>o.cat),
     [{data:D.objections.map(o=>o.count),

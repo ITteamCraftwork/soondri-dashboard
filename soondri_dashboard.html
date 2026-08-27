@@ -1565,7 +1565,7 @@ function showPane(id){
 }
 
 function renderPane(id){
-  if(rendered[id]) return;
+  if(id!=='p2' && rendered[id]) return;
   rendered[id]=true;
   const fn={'a1':renderA1,'a2':renderA2,'a3':renderA3,'a4':renderA4,'i1':renderI1,'i2':renderI2,'i3':renderI3,'p1':renderP1,'p2':renderP2,'p3':renderP3}[id];
   if(fn) fn();

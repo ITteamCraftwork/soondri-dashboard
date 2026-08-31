@@ -1139,11 +1139,14 @@ const CUSTOMERS_BY_STATUS = {
 const D = {
   totalCustomers:307, totalCalls:295, reachable:199,
   // ตัวเลขจริงจากคอลัมน์ F + Column M
-  warmLeads:12, hotLeads:0, neutralLeads:0, coolLeads:133, coldLeads:83,
+  warmLeads:12, hotLeads:0,
+  closedDeals:10, neutralLeads:0, coolLeads:133, coldLeads:83,
   brochure:42, siteVisit:0, closed:0,
   thai:200, foreign:107,
-  uncalled:12, noAnswer:19, wrongNum:4, abroad:66, offline:7,
+  uncalled:12, noAnswer:19, wrongNum:4, abroad:65, offline:7,
   unreachable:96, vvip:7, concern:23,
+  concernA:8,
+  concernB:15,
 
   // Nationality breakdown (จากข้อมูลจริง col F + col M)
   natBreakdown:{
@@ -1164,7 +1167,7 @@ const D = {
     },
     foreign:{
       total:107, pct:34.9,
-      reachable:38, noAnswer:4, abroad:66,
+      reachable:38, noAnswer:4, abroad:65,
       interest:{hot:0, warm:4, neutral:0, cool:26, cold:0},
       potential:[
         {name:'Lars Zurawski',unit:'3401',interest:4,budget:'-',sales:'Eip',country:'—'},

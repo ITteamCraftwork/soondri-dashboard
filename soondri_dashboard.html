@@ -2506,51 +2506,22 @@ function renderI3(){
 // P1 — EARLY WARNING
 // ─────────────────────────────────────────────
 function renderP1(){
-  var CS = D.callStatus;
-  var warmHot = D.warmLeads + D.hotLeads;
-
-  // ── นับ Warm/Hot leads จริง ──
-  var warmLeads = [];
-  ['vvipYes','vvipNo','waitSample','priceTooHigh','petZone','wantInfo','callBack'].forEach(function(k){
-    (CUSTOMERS_BY_STATUS[k]||[]).forEach(function(c){
-      if(c.interest >= 4) warmLeads.push({...c, statusKey:k});
-    });
-  });
-  warmLeads.sort(function(a,b){return b.interest-a.interest});
-
-  var brandCount = (CS.concernReached.cnt||0) + (CS.concernNo.cnt||0);
-
-  // ── Update counters ──
-  document.getElementById('p1-warmcount').textContent = warmLeads.length;
-  document.getElementById('p1-brandcount').textContent = brandCount;
-
-  // ── Warm Lead Table ──
-  var iCol = {5:'#dc2626',4:'#d97706',3:'#6b7280',2:'#0891b2',1:'#9ca3af',0:'#d1d5db'};
-  var iBg  = {5:'#fee2e2',4:'#fef3c7',3:'#f4f4f5',2:'#e0f2fe',1:'#f9fafb',0:'#f4f4f5'};
-
-  document.getElementById('p1-warmtbody').innerHTML = warmLeads.map(function(c,i){
-    var flag = c.nat==='ไทย'?'🇹🇭':'🌍';
-    var action = c.interest===5?'🔥 โทรยืนยัน Booking ทันที':
-                 c.statusKey==='vvipYes'?'✅ Confirm วัน VVIP':
-                 c.statusKey==='waitSample'?'🏠 นัด Site Visit':
-                 c.statusKey==='callBack'?'📞 โทรกลับตามนัด':
-                 '📋 ส่งข้อมูลเพิ่ม + นัด Presentation';
-    return '<tr style="cursor:pointer" onclick="openDrill(\'👤 '+c.name+'\',\'<div style=padding:12px><div style=font-size:13px;font-weight:700;margin-bottom:8px>'+c.name+' — ยูนิต '+c.unit+'</div><div style=font-size:12px;color:#374151;line-height:1.8><b>Sales:</b> '+c.sales+'<br><b>สัญชาติ:</b> '+c.nat+'<br><b>ห้อง:</b> '+c.utype+'<br><b>งบ:</b> '+c.budget+'</div><div style=margin-top:10px;font-size:12px;color:#6b7280;font-style:italic>💬 '+c.colN+'</div></div>\')">'
-      +'<td><strong>'+(i+1)+'</strong></td>'
-      +'<td>'+flag+' <strong>'+c.name+'</strong></td>'
-      +'<td>'+c.unit+'</td>'
-      +'<td>'+c.nat+'</td>'
-      +'<td>'+c.sales+'</td>'
-      +'<td><span style="background:'+iBg[c.interest]+';color:'+iCol[c.interest]+';font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px">'+c.ilabel+'</span></td>'
-      +'<td style="font-size:11px;color:#6b7280;max-width:150px">'+c.colM+'</td>'
-      +'<td style="font-size:11px;color:#6b7280;max-width:150px;font-style:italic">'+c.colN+'</td>'
-      +'<td style="font-size:11px;color:#2557a7;font-weight:600">'+action+'</td></tr>';
-  }).join('') || '<tr><td colspan="9" style="text-align:center;color:#9ca3af;padding:20px">ยังไม่มี Warm/Hot Lead ที่บันทึก Interest Level</td></tr>';
+  var rw="";
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#60</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นายเตชิต วงศ์ตระกูลจง และ นา</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>1804</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>สะดวก VVIP</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>ลูกค้าขอดูรายละเอียดก่อนค่ะ ให้ส่งข้อมูลให้ค่ะ</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#197</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นายสุวิทย์ ตั้งเลิศสัมพันธ์</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>4006</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>สะดวก VVIP</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>สนใจ 1 ห้องนอน 55 ตร.ม. ตำแหน่ง 05 ชั้นกลาง ส่งข้อมูลใบราคา 2405 ให้พิจารณา</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#39</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นางรัชนี ศุภประเสริฐ</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>1504</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ไม่สะดวก VVIP</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>ลูกค้าสนใจดูลงทุน 2 ห้องนอน เพราะปล่อยเช่าง่าย ให้ส่งข้อมูลเพิ่มทางไลน์ค่ะ</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#43</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นายนเรศ เพชรรักษ์</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>1601</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ราคาสูง</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>Call out 1 ไม่สะดวกคุยสาย Call out 2 สนใจ 2 ห้องนอนชั้นประมาณ 10-20 ให้ส่งข้อม</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#63</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นางวัชโรบล สามล</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>1807</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ราคาสูง</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>ลูกค้าสอบถามข้อมูลเบื้องต้น ให้ส่งข้อมูลทางไลน์แจ้งกำหนดการรอบจอง VVIP ช่วงปลายเ</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#266</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🌍 นายPaul James Cook</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>502</td><td style='padding:10px 8px;font-size:11px'>ต่างชาติ</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ราคาสูง</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>Call out 1 ทางภรรยารับสายและให้ส่งข้อมูลให้ทางไลน์คุณเจมส์ตามเบอร์โทร Call out</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#130</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นางทิพย์นภา เศรษฐบุตร และ นา</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>2906</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ขอข้อมูล LINE</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>ลูกค้าให้ติดต่อเบอร์คุณพ่อ คุณสุรินทร์ เบอร์ 081-6161500 ลูกค้าอยู่อยุธยาจะมาอาร</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#188</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🌍 นางchen guo</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>3902</td><td style='padding:10px 8px;font-size:11px'>ต่างชาติ</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Maila</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ขอข้อมูล LINE</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>ลูกค้าอยู่ต่างประเทศ ส่งข้อมูลไปทางWhatspp ยังไม่ตอบกลับมา</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#262</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🇹🇭 นางสาวณัฐริญาณ์ ธราวัชร์กฤษศ</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>5005</td><td style='padding:10px 8px;font-size:11px'>ไทย</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Pupey</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>ขอข้อมูล LINE</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>Call out 1 ลูกค้าไม่สะดวกคุยให้ติดต่อภายหลัง Call out 2 ลูกค้าให้แอดไลน์ส่งข้อ</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+rw+=`<tr style='border-bottom:1px solid #f1f5f9'><td style='padding:10px 8px;color:#94a3b8;font-size:11px'>#272</td><td style='padding:10px 8px;font-weight:700;font-size:12px'>🌍 นายCraig Alvin Corliss และ น</td><td style='padding:10px 8px;font-size:11px;color:#64748b'>5101</td><td style='padding:10px 8px;font-size:11px'>ต่างชาติ</td><td style='padding:10px 8px;font-size:11px;color:#2557a7;font-weight:600'>Eip</td><td style='padding:10px 8px'><span style='background:#d9770618;color:#d97706;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px'>🟡 ติดตาม</span></td><td style='padding:10px 8px;font-size:11px;color:#64748b'>มี Concern</td><td style='padding:10px 8px;font-size:11px;color:#374151;max-width:240px;line-height:1.5'>16.8.2026 ลูกค้าติดต่อผ่านทาง Pattaya Pro นัดหมายนำเสนอ ลูกค้าให้ความสนใจห้อง</td><td style='padding:10px 8px;font-size:11px;font-weight:700;color:#dc2626'>📞 โทรด่วน</td></tr>`;
+  document.getElementById("p1-warmtbody").innerHTML=rw;
+  document.getElementById("p1-warmcount").textContent="10";
+  document.getElementById("p1-brandcount").textContent="23";
 }
 
-// ─────────────────────────────────────────────
-// P2 — BRAND RISK MONITOR
-// ─────────────────────────────────────────────
 function renderP2(){
   var CA=D.callStatus;
   var cntA=CA.concernReached?CA.concernReached.cnt:D.concernA;

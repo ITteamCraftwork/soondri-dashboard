@@ -1445,7 +1445,7 @@ const D = {
     {cat:'💸 งบไม่ถึงราคาที่เสนอ',count:14,pct:7,script:'เข้าใจเรื่องงบครับ/ค่ะ ตอนนี้มี Early Bird Package พิเศษสำหรับลูกค้าเดิม เงินดาวน์เริ่มต้น 5% ผ่อนระหว่างก่อสร้าง ขอนำเสนอแผนการเงินให้ดูก่อนได้ไหมครับ/ค่ะ',note:'เสนอ Flexible Payment + Loyalty Discount'},
     {cat:'⏳ ยังไม่ใช่เวลา',count:26,pct:18,script:'รับทราบครับ/ค่ะ ขอฝากข้อมูลไว้ก่อนนะครับ/ค่ะ จะได้มีข้อมูลพร้อมเมื่อถึงเวลา โครงการนี้ราคาจะปรับขึ้นหลังเปิดขายรอบ Public ประมาณ 8-10% ครับ/ค่ะ',note:'สร้าง Urgency ด้วย Price Escalation'},
     {cat:'🔧 ไม่เชื่อมั่นโครงการเดิม',count:15,pct:8,script:'ขอบคุณที่แจ้งให้ทราบครับ/ค่ะ ขอโทษในความไม่สะดวกที่เกิดขึ้น จะรีบประสานทีมที่เกี่ยวข้องเพื่อแก้ไขโดยเร็วครับ/ค่ะ โครงการใหม่นี้ใช้มาตรฐานการก่อสร้างที่ปรับปรุงใหม่ทั้งหมด',note:'⚠️ BRAND RISK — ต้องแจ้ง Management ทันที'},
-    {cat:'📉 ไม่สนใจลงทุนอสังหาฯ',count:55,pct:14,script:'เข้าใจครับ/ค่ะ ในช่วงนี้หลายคนกระจายการลงทุน อสังหาฯ พัทยาให้ผลตอบแทนที่ดีและมีความเสี่ยงต่ำกว่า ขอฝากข้อมูลเปรียบเทียบ ROI ไว้พิจารณาได้ไหมครับ/ค่ะ',note:'เปรียบเทียบ vs ทอง/หุ้น ด้วยตัวเลขจริง'},
+    {cat:'📉 ไม่สนใจลงทุนอสังหาฯ',count:48,pct:14,script:'เข้าใจครับ/ค่ะ ในช่วงนี้หลายคนกระจายการลงทุน อสังหาฯ พัทยาให้ผลตอบแทนที่ดีและมีความเสี่ยงต่ำกว่า ขอฝากข้อมูลเปรียบเทียบ ROI ไว้พิจารณาได้ไหมครับ/ค่ะ',note:'เปรียบเทียบ vs ทอง/หุ้น ด้วยตัวเลขจริง'},
     {cat:'🔇 ปฏิเสธโดยไม่ระบุเหตุผล',count:10,pct:12,script:'รับทราบครับ/ค่ะ ไม่เป็นไรเลย ขอฝากข้อมูลเผื่อสนใจในอนาคตนะครับ/ค่ะ มีอะไรอยากให้ช่วยเหลือได้ตลอดเลยครับ/ค่ะ',note:'จบสั้นๆ สร้าง Goodwill ไม่กดดัน'},
   ],
 
@@ -2022,8 +2022,8 @@ function renderA2(){
 
   document.getElementById('a2-kpi').innerHTML=`
     <div class="kpi"><div class="kpi-lbl">Salesperson</div><div class="kpi-val">${sd.length}</div><div class="kpi-sub">คน</div></div>
-    <div class="kpi g"><div class="kpi-lbl">Top Performer</div><div class="kpi-val" style="font-size:20px">Pupey</div><div class="kpi-sub">Warm Lead 9 ราย | Rate 75%</div></div>
-    <div class="kpi b"><div class="kpi-lbl">Highest Rate</div><div class="kpi-val" style="font-size:20px">Eip</div><div class="kpi-sub">Contact Rate 80% (44 calls)</div></div>
+    <div class="kpi g"><div class="kpi-lbl">Top Performer</div><div class="kpi-val" style="font-size:20px">Pupey</div><div class="kpi-sub">Warm Lead 8 ราย | Contact Rate 76%</div></div>
+    <div class="kpi b"><div class="kpi-lbl">Highest Rate</div><div class="kpi-val" style="font-size:20px">Eip</div><div class="kpi-sub">Contact Rate 67% (44 calls)</div></div>
     <div class="kpi y"><div class="kpi-lbl">เฉลี่ยโทร/คน</div><div class="kpi-val">${(totalCl/sd.filter(x=>x.calls>0).length).toFixed(0)}</div><div class="kpi-sub">ครั้ง/คน</div></div>`;
 
   mkChart('teamRadar','radar',
@@ -2047,7 +2047,7 @@ function renderA2(){
   document.getElementById('teamTbody').innerHTML=sd.map(x=>{
     const rate=x.calls>0?(x.reached/x.calls*100).toFixed(0):0;
     const col=rate>=60?'bd-g':rate>=40?'bd-y':'bd-r';
-    const tips=x.name==='Joong'?'Contact Rate 100% (9/9) — เพิ่มปริมาณการโทรให้มากขึ้น':
+    const tips=x.name==='Joong'?'Contact Rate 100% (11/11) — เพิ่มปริมาณการโทรให้มากขึ้น':
       x.name==='Pluck'?'Contact Rate 75% — เพิ่มความถี่การโทร':
       rate>=60?'ยังคงมาตรฐาน — เป็น Best Practice':
       'Coaching: เพิ่ม Quality Conversation';
@@ -2064,9 +2064,9 @@ function renderA2(){
   var bestWarmCnt = bestWarm ? bestWarm.warm : 9;
 
   document.getElementById('bestPractice').innerHTML=
-    '<div class="alert g"><div class="alert-icon">🏆</div><div><div class="alert-title">Best Practice — Pupey (Warm Lead '+bestWarmCnt+' ราย | Contact Rate 75%)</div><div class="alert-text">โทรช่วง 10:00–14:00 | ส่ง LINE ก่อนโทร 30 นาที | บทสนทนาเน้น Investment Value + ROI | Follow-up ภายใน 24 ชม.</div></div></div>'
+    '<div class="alert g"><div class="alert-icon">🏆</div><div><div class="alert-title">Best Practice — Pupey (Warm Lead '+bestWarmCnt+' ราย | Contact Rate 76%)</div><div class="alert-text">โทรช่วง 10:00–14:00 | ส่ง LINE ก่อนโทร 30 นาที | บทสนทนาเน้น Investment Value + ROI | Follow-up ภายใน 24 ชม.</div></div></div>'
    +'<div class="alert b"><div class="alert-icon">💡</div><div><div class="alert-title">Pattern ที่ควรนำไปใช้ทั้งทีม</div><div class="alert-text">1. ส่ง LINE ก่อนโทร 30 นาที<br>2. โทรช่วง 10:00–15:00<br>3. ถามเรื่อง Budget ตั้งแต่ Call แรก<br>4. นัด Follow-up ก่อนวางสาย</div></div></div>'
-   +'<div class="alert g"><div class="alert-icon">⭐</div><div><div class="alert-title">Eip — Contact Rate 80% สูงที่สุดในทีม (Warm 2 ราย, 44 calls)</div><div class="alert-text">Eip มี Rate สูงสุด — ควรให้ Mentor ทีมอื่นในเรื่อง Conversation Quality</div></div></div>';
+   +'<div class="alert g"><div class="alert-icon">⭐</div><div><div class="alert-title">Eip — Contact Rate 67% สูงที่สุดในทีม (Warm 2 ราย, 44 calls)</div><div class="alert-text">Eip มี Rate สูงสุด — ควรให้ Mentor ทีมอื่นในเรื่อง Conversation Quality</div></div></div>';
 }
 
 // ─────────────────────────────────────────────
